@@ -1,0 +1,23 @@
+{
+  "name": "pescaprecos",
+  "version": "1.0.0",
+  "description": "Layout para teste na startup zero1bit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guilherme-Chinaglia/pescaprecos.git"
+  },
+  "keywords": [
+    "zero1bit",
+    "pescaprecos"
+  ],
+  "author": "Guilherme Chinaglia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Guilherme-Chinaglia/pescaprecos/issues"
+  },
+  "homepage": "https://github.com/Guilherme-Chinaglia/pescaprecos#readme"
+}
