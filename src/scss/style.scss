@@ -1,0 +1,166 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/@fortawesome/fontawesome-free-webfonts/scss/fontawesome";
+@import "../../node_modules/@fortawesome/fontawesome-free-webfonts/scss/fa-brands";
+@import "../../node_modules/@fortawesome/fontawesome-free-webfonts/scss/fa-regular";
+@import "../../node_modules/@fortawesome/fontawesome-free-webfonts/scss/fa-solid";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,700');
+
+//custom-placeholder
+@import "_custom-placeholder";
+
+body{
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.container-fluid{
+
+  padding: 0;
+}
+
+//header
+.header{
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+
+  background-color: #fff;
+
+  .logo{
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 98px;
+        
+    .title{
+
+      display: none;
+    }
+  }
+
+  .nav{
+
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    .nav-list{
+
+      display: flex;
+      @extend %reset-list;
+      
+      li{
+
+        padding-left: 35px;
+      }
+
+      a{
+
+        color: rgba(0, 0, 0, 0.6);
+
+        &:hover{
+
+          text-decoration: none;
+          color: #00abf7;
+        }  
+      }
+    }
+  }
+}
+
+//main
+.main{
+
+  width: 100%;
+  background-color: #f2f2f2;
+
+  .chamada-cadastro{
+
+    text-align: center;
+
+    color: #58595b;
+  
+    .title-chamada{
+
+      padding-top: 3rem;
+      font-size: 42px;
+      font-weight: bold;
+    }
+
+    .chamada{
+
+      @extend %reset-paragraph;
+      margin-bottom: .4rem;
+
+      color: rgba(0,0,0,0.6);
+      font-weight: 400;
+    }
+  }
+
+  .form-cadastro{
+
+    margin-top: 3.5rem;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 9.9px 0.1px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+
+    .form-cadastro-header{
+
+      padding-top: 3.5rem;
+      padding-bottom: 4.6rem;
+
+      text-align: center;  
+      
+      .list-nav-form{
+
+        @extend %reset-list;
+        display: flex;
+        justify-content: center;
+
+        .item-nav-form{
+
+          color: #b2b4b6;
+          font-weight: 600;
+          font-size: 21px;
+        }
+
+        .link-nav-form{
+
+          font-weight: 700;
+          font-size: 20px;
+          margin-right: 20px;
+
+          width: 40px;
+          height: 40px;  
+          padding: 7px 15px;
+
+          color: #fff;
+          border-radius: 50%;
+          background-color:#b1b3b6;
+        }
+        
+        .active{
+
+          color: #58595b;
+          font-weight: 600;
+
+          .link-nav-form{
+
+            background-color: #1db2f5;
+          }
+        }
+
+        .seta{
+
+          margin: 0 27px;
+        }
+      }
+    }
+  }
+}

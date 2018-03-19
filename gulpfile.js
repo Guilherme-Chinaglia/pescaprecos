@@ -97,7 +97,7 @@ gulp.task("move-fonts", function () {
 gulp.task("server", function () {
   browserSync.init({
 		server: {
-			baseDir: "./dist/index.html"
+      baseDir: "./dist/"
 		}
 		
   });
@@ -106,9 +106,9 @@ gulp.task("server", function () {
   gulp.watch("./src/scss/**/*.scss", ['sass']);
   gulp.watch("node_modules/bootstrap/scss/**/*.scss", ['sass']);
   gulp.watch("./src/js/**/*.js", ['js']);
-  gulp.watch("./src/*.php", ['html']);
+  gulp.watch("./src/*.html", ['html']);
 });
 
 gulp.task("default", function (cb) {
-  return runSequence(['imagemin', 'sass', 'includes', 'html', 'jshint', 'js', 'concat-js', 'move-fonts', 'server'], cb)
+  return runSequence(['imagemin', 'sass', 'html', 'jshint', 'js', 'concat-js', 'move-fonts', 'server'], cb)
 });
