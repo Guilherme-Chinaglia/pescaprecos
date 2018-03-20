@@ -110,6 +110,16 @@ body{
     box-shadow: 0px 0px 9.9px 0.1px rgba(0, 0, 0, 0.15);
     background-color: #fff;
 
+    .row{
+
+      align-items: center;
+
+      &.custom-info-plano{
+
+        margin-top: 87px;
+      }
+    }
+
     .form-cadastro-header{
 
       padding-top: 3.5rem;
@@ -168,6 +178,7 @@ body{
       color: #1db2f5;
       font-weight: 400;
       font-size: 24px;
+      //padding-bottom: 44px;
     }
 
     .col-form{
@@ -175,9 +186,115 @@ body{
       padding-right: 77px;
       padding-left: 70px;
 
+      .form-group{
+
+        margin-top: 44px;
+      }
+
+      &.custom-row-form{
+
+
+        .custom-nome-fantasia{
+
+          margin-bottom: 70px;
+        }
+        
+      }
+
       &:nth-last-child(1){
 
         padding-left: 0;
+      }
+
+      .custom-input{
+        
+        font-size: 18px;
+        font-weight: 400;
+        border: none;
+        border-radius: 0;
+        border-bottom: 2px solid #b1b3b6;
+        padding: 0 0 12px 0;
+
+        &:focus{
+
+          box-shadow: none;
+          border-bottom: 2px solid #1db2f5;
+        }
+      }
+
+      .custom-label{
+
+        color:rgba(0,0,0,0.6);
+        font-weight: 400;
+      }
+
+      .avisos{
+
+        color: #939598;
+        font-size: 12px;
+        font-weight: 400;
+
+        .avisos-link{
+
+          color: #939598;
+          font-weight: bold; 
+        }
+      }
+    }
+
+    .custom-row-resumo{
+
+      margin-top: 46px;
+      margin-left: 0;
+      margin-right: 0;
+
+      .custom-col-resumo{
+
+        color: #fff;
+        background-color: #1db2f5;
+        
+        .title-row-resumo{
+
+          text-align: center;
+          font-size: 32px;
+          font-weight: 400;
+          padding-top: 54px;
+          padding-bottom: 39px;
+
+          color: #fff;
+        }
+
+        .resumocontratado{
+
+          .list-resumocontratado{
+
+            @extend %reset-list;
+            display: flex;
+            justify-content: center;
+                                  
+            .item-resumocontratado{
+
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+
+              margin-left: 30px;
+              width: 175px;
+              height: 210px;
+
+              color: #58595b;
+              background-color: #fff;
+              border-radius: 3px;
+              box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+
+              &:first-child{
+
+                margin-left: 0;
+              }
+            }
+          }  
+        }
       }
     }
   }

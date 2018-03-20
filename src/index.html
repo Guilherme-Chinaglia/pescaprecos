@@ -53,32 +53,32 @@
               <div class="col col-form">
                 <h3 class="title-form">01. Informações de Acesso a Conta</h3>
                 <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" class="form-control" id="email" aria-describedby="emailAviso" placeholder="Digite um e-mail válido">
-                  <small id="emailAviso" class="form-text text-muted">Utilize um e-mail profissional, ele não será visto pelos clientes.</small>
+                  <label class="custom-label" for="email">E-mail</label>
+                  <input type="email" class="form-control custom-input" id="email" aria-describedby="emailAviso" placeholder="Digite um e-mail válido">
+                  <small id="emailAviso" class="form-text text-muted avisos">Utilize um e-mail profissional, ele não será visto pelos clientes.</small>
                 </div>
                 <div class="form-group">
-                  <label for="senha">Senha</label>
-                  <input type="password" class="form-control" id="senha" placeholder="Digite uma senha">
+                  <label class="custom-label" for="senha">Senha</label>
+                  <input type="password" class="form-control custom-input" id="senha" placeholder="Digite uma senha">
                 </div>
                 <div class="form-group">
-                  <label for="confirmarsenha">Confirmar senha</label>
-                  <input type="password" class="form-control" id="confirmarsenha" placeholder="Digite novamente a senha">
+                  <label class="custom-label" for="confirmarsenha">Confirmar senha</label>
+                  <input type="password" class="form-control custom-input" id="confirmarsenha" placeholder="Digite novamente a senha">
                 </div>
               </div><!-- FIM PRIMEIRA COLUNA -->
-              <div class="col col-form">
+              <div class="col col-form custom-row-form">
                 <h3 class="title-form">02. Informações Institucionais</h3>
-                <div class="form-group">
-                  <label for="nomefantasia">Nome Fantasia</label>
-                  <input type="text" class="form-control" id="nomefantasia" placeholder="Digite o nome fantasia de seu negócio">
+                <div class="form-group custom-nome-fantasia">
+                  <label class="custom-label" for="nomefantasia">Nome Fantasia</label>
+                  <input type="text" class="form-control custom-input" id="nomefantasia" placeholder="Digite o nome fantasia de seu negócio">
                 </div>
                 <div class="form-group">
-                  <label for="tipoplataforma">Tipo de Plataforma</label>
-                  <input type="text" class="form-control" id="tipoplataforma" placeholder="Digite o tipo de plataforma do seu negócio">
+                  <label class="custom-label" for="tipoplataforma">Tipo de Plataforma</label>
+                  <input type="text" class="form-control custom-input" id="tipoplataforma" placeholder="Digite o tipo de plataforma do seu negócio">
                 </div>
                 <div class="form-group">
-                  <label for="segmentodaempresa">Segmento da Empresa</label>
-                  <select class="form-control" id="segmentodaempresa">
+                  <label class="custom-label" for="segmentodaempresa">Segmento da Empresa</label>
+                  <select class="form-control custom-input" id="segmentodaempresa">
                     <option>Selecione um segmento</option>
                     <option>Tecnologia</option>
                     <option>3</option>
@@ -88,25 +88,25 @@
                 </div>
               </div><!-- FIM SEGUNDA COLUNA -->
             </div><!-- FIM DA PRIMEIRA LINHA -->
-            <div class="row">
+            <div class="row custom-info-plano">
               <div class="col col-form">
                 <h3 class="title-form">03. Informações do Plano</h3>
                 <div class="form-group">
-                  <label for="plano">Plano</label>
-                  <select class="form-control" id="plano" aria-describedby="planoAviso">
+                  <label class="custom-label" for="plano">Plano</label>
+                  <select class="form-control custom-input" id="plano" aria-describedby="planoAviso">
                     <option>Selecione um plano</option>
                     <option>até 100 Produtos</option>
                     <option>3</option>
                     <option>4</option>
                     <option>5</option>
                   </select>
-                  <small id="planoAviso" class="form-text text-muted">Não tem o plano que você quer? <a href="#">Clique aqui</a> e fale conosco.</small>
+                  <small id="planoAviso" class="form-text text-muted avisos">Não tem o plano que você quer? <a class="avisos-link" href="#">Clique aqui</a> e fale conosco.</small>
                 </div>
               </div>
               <div class="col col-form">
                 <div class="form-group">
-                  <label for="periodoplano">Período do Plano</label>
-                  <select class="form-control" id="periodoplano">
+                  <label class="custom-label" for="periodoplano">Período do Plano</label>
+                  <select class="form-control custom-input" id="periodoplano">
                     <option>Selecione um período</option>
                     <option>3 meses</option>
                     <option>3</option>
@@ -116,25 +116,25 @@
                 </div>
               </div>
             </div><!-- FIM DA SEGUNDA LINHA -->  
-            <div class="row">
-              <div class="col">
-                <h3>Você está contratando</h3>
+            <div class="row custom-row-resumo">
+              <div class="col custom-col-resumo">
+                <h3 class="title-row-resumo">Você está contratando</h3>
                 <div class="resumocontratado">
-                  <ul>
-                    <li>
-                      icone
+                  <ul class="list-resumocontratado">
+                    <li class="item-resumocontratado">
+                      <img src="img/certificate.png" alt="">
                       <p>Plano de até</p>
                       <p>1000</p>
                       <p>items</p>
                     </li>
-                    <li>
-                      icone
+                    <li class="item-resumocontratado">
+                      <img src="img/calendar2.png" alt="">
                       <p>Período de</p>
                       <p>3</p>
                       <p>meses</p>
                     </li>
-                    <li>
-                      icone
+                    <li class="item-resumocontratado">
+                      <img src="img/trophy.png" alt="">
                       <p>Ganhou</p>
                       <p>+1 mês</p>
                       <p>grátis</p>
