@@ -77,6 +77,7 @@ body{
 .main{
 
   width: 100%;
+  padding-bottom: 102px;
   background-color: #f2f2f2;
 
   .chamada-cadastro{
@@ -266,6 +267,8 @@ body{
 
         .resumocontratado{
 
+          margin-bottom: 29px;
+
           .list-resumocontratado{
 
             @extend %reset-list;
@@ -292,10 +295,144 @@ body{
 
                 margin-left: 0;
               }
+
+              .img-resumocontratado{
+
+                margin-bottom: 25px;
+              }
+
+              .info-resumocontratado{
+
+                margin-bottom: 0;
+                font-size: 16px;
+                font-weight: 400;
+
+                &.destaque-resumocontratado{
+
+                  font-size: 32px;
+                  font-weight: 700;
+                  color: #58595b;
+                }
+              }
             }
           }  
         }
+
+        .precototal{
+
+          width: 225px;
+          margin-top: 23px;
+          margin-bottom: 40px;
+          margin-left: auto;
+          margin-right: auto;
+          padding-top: 23px;
+          text-align: center;
+
+          border-top: 1px solid rgba(255, 255, 255, 0.35);
+
+          .img-precototal{
+
+            float: left;
+            margin-right: 20px;
+          }
+
+          .title-precototal{
+
+            margin-bottom: 0;
+            font-size: 16px;
+            font-weight: 400;
+          }
+
+          .value-precototal{
+
+            font-size: 32px;
+            font-weight: 700;
+          }
+        }
       }
     }
+
+    .button-action{
+
+      text-align: center;
+      height: 200px;
+
+      .custom-btn-action{
+
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 29px;
+        
+        width: 329px;
+        height: 55px;
+        border-radius: 50px;
+        border: none;
+        background-color:#1db2f5;
+      }
+
+      .text-terms-polite{
+
+        font-size: 13px;
+        font-weight: 400;
+
+        color: #6d6e71;
+
+        .link-text-terms{
+
+          color: #58595b;
+          font-weight: 600;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+//footer
+.footer{
+
+  color: #fff;
+
+  .col-links-footer{
+
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 166px;
+    
+    padding-left: 474px;
+    padding-top: 51px;
+    padding-bottom: 75px;
+    background-color:#00a5ee;
+
+    .col-algumas-categorias{
+
+      padding-left: 187px;
+    }
+
+    .title-aboutus{
+
+      font-size: 21px;
+      font-weight: 700;
+    }
+
+    .list-link-footer{
+
+      @extend %reset-list;
+      
+      .link-footer{
+
+        font-size: 14px;
+        font-weight: 400;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .col-links-anunciante{
+
+    padding-top: 51px;
+    padding-left: 55px;
+    background-color: #1db2f5;
   }
 }
