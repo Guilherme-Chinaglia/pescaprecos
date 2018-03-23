@@ -406,14 +406,43 @@ body{
 
     .col-algumas-categorias{
 
-      padding-left: 187px;
+      padding-left: 80px;
     }
 
-    .title-aboutus{
+    .midiasocial{
 
-      font-size: 21px;
-      font-weight: 700;
+      margin-top: 47px;
+
+      .list-midiasocial{
+
+        display: flex;
+        @extend %reset-list;
+
+        .link-midiasocial{
+        
+          color: #fff;
+        }  
+
+        .item-midiasocial{
+          
+          padding-left: 25px;
+
+          &:first-child{
+
+            padding-left: 0;
+          }
+        }  
+      }  
     }
+  }
+
+  .title-footer{
+
+    width: 210px;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
 
     .list-link-footer{
 
@@ -427,12 +456,61 @@ body{
         text-decoration: none;
       }
     }
-  }
 
   .col-links-anunciante{
 
     padding-top: 51px;
     padding-left: 55px;
+    padding-right: 130px;
     background-color: #1db2f5;
+
+    .list-anunciantes{
+
+      @extend %reset-list;
+
+      .item-anunciantes{
+
+        margin-bottom: 80px;
+
+        &:first-child{
+
+          margin-bottom: 25px;
+        }
+      }
+
+      .link-anunciantes{
+
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+
+        .img-anunciante{
+
+          margin-right: 15px;
+        }
+        
+      }
+    }
+  }
+
+  .logotipo{
+
+    font-size: 14px;
+
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 600;
+  }
+}
+
+//footer POLITICA
+.footer-politica{
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  .footer-politica-aviso{
+
+    font-size: 9px;
+    text-align: center;
   }
 }
