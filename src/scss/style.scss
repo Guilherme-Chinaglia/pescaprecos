@@ -17,7 +17,8 @@ body{
 
 .container-fluid{
 
-  padding: 0;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 //header
@@ -49,6 +50,11 @@ body{
     display: flex;
     justify-content: flex-end;
 
+    .navbar-collapse{
+
+      flex-grow: 0;
+    }
+
     .nav-list{
 
       display: flex;
@@ -57,6 +63,11 @@ body{
       li{
 
         padding-left: 35px;
+
+        @include media-breakpoint-down(md) {
+
+          padding-left: 10px;
+        }
       }
 
       a{
@@ -194,6 +205,10 @@ body{
 
       &.custom-row-form{
 
+        @include media-breakpoint-down(sm) {
+
+          margin-top: 87px;
+        }
 
         .custom-nome-fantasia{
 
@@ -204,7 +219,12 @@ body{
 
       &:nth-last-child(1){
 
-        padding-left: 0;
+        //padding-left: 0;
+
+        @include media-breakpoint-down(xs) {
+
+          padding-left: 70px;
+        }
       }
 
       .custom-input{
@@ -286,6 +306,11 @@ body{
               width: 175px;
               height: 210px;
 
+              @include media-breakpoint-down(xs) {
+
+                margin-left: 15px;
+              }
+
               color: #58595b;
               background-color: #fff;
               border-radius: 3px;
@@ -312,6 +337,11 @@ body{
                   font-size: 32px;
                   font-weight: 700;
                   color: #58595b;
+
+                  @include media-breakpoint-down(xs) {
+
+                    font-size: 26px;
+                  }
                 }
               }
             }
@@ -393,20 +423,51 @@ body{
 
   color: #fff;
 
+  .custom-footer-row{
+
+    margin-right: 0;
+    margin-left: 0;
+  }
+
   .col-links-footer{
 
     display: flex;
     justify-content: flex-end;
-    padding-right: 166px;
+    flex-grow: 2.4;
+
+    @include media-breakpoint-down(sm) {
+
+      justify-content: center;
+
+      flex-grow: 1.4;
+
+      .row-footer {
+
+        display: flex;
+        justify-content: center;
+      }
+    }
+
     
-    padding-left: 474px;
     padding-top: 51px;
     padding-bottom: 75px;
     background-color:#00a5ee;
 
     .col-algumas-categorias{
 
-      padding-left: 80px;
+      margin-right: 140px;
+      margin-left: 40px;
+
+      @include media-breakpoint-down(lg) {
+
+        margin-right: 15px;
+        margin-left: 0;
+      }
+
+      @include media-breakpoint-down(md) {
+
+        margin-right: 0;
+      }
     }
 
     .midiasocial{
@@ -442,6 +503,11 @@ body{
     font-size: 21px;
     font-weight: 700;
     margin-bottom: 20px;
+
+    @include media-breakpoint-down(sm) {
+
+      margin-top: 20px;
+    }
   }
 
     .list-link-footer{
@@ -459,9 +525,25 @@ body{
 
   .col-links-anunciante{
 
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1.5;
+
+    padding-left: 50px;
+
+     @include media-breakpoint-down(lg) {
+      
+      padding-left: 30px;
+    }
+
+    @include media-breakpoint-down(sm) {
+
+      align-items: center;
+      padding-left: 0;
+    }
+   
     padding-top: 51px;
-    padding-left: 55px;
-    padding-right: 130px;
+    
     background-color: #1db2f5;
 
     .list-anunciantes{

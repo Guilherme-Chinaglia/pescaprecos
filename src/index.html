@@ -15,15 +15,23 @@
           <img src="img/logo-pescapreco.png" alt="Pescapreços">
           <h1 class="title">pescapreços</h1>
         </div>
-        <nav class="nav">
-          <ul class="nav-list">
-            <li><a href="#">o buscador</a></li>
-            <li><a href="">como funciona</a></li>
-            <li><a href="">preços</a></li>
-            <li><a href="">contato</a></li>
-            <li><a href="">cadastre-se</a></li>
-            <li><a href="">entrar</a></li>  
+        <nav class="nav navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#"></a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="nav-list navbar-nav">
+            <li class="nav-item"><a href="#">o buscador</a></li>
+            <li class="nav-item"><a href="">como funciona</a></li>
+            <li class="nav-item"><a href="">preços</a></li>
+            <li class="nav-item"><a href="">contato</a></li>
+            <li class="nav-item"><a href="">cadastre-se</a></li>
+            <li class="nav-item"><a href="">entrar</a></li>  
           </ul>  
+          </div>
         </nav>  
       </header>
     </div>  
@@ -50,35 +58,35 @@
           </header>
           <form action="#">
             <div class="row">
-              <div class="col col-form">
+              <div class="col-sm-12 col-md-6 col-form">
                 <h3 class="title-form">01. Informações de Acesso a Conta</h3>
                 <div class="form-group">
                   <label class="custom-label" for="email">E-mail</label>
-                  <input type="email" class="form-control custom-input" id="email" aria-describedby="emailAviso" placeholder="Digite um e-mail válido">
+                  <input type="email" class="form-control custom-input" id="email" aria-describedby="emailAviso" placeholder="Digite um e-mail válido" required>
                   <small id="emailAviso" class="form-text text-muted avisos">Utilize um e-mail profissional, ele não será visto pelos clientes.</small>
                 </div>
                 <div class="form-group">
                   <label class="custom-label" for="senha">Senha</label>
-                  <input type="password" class="form-control custom-input" id="senha" placeholder="Digite uma senha">
+                  <input type="password" class="form-control custom-input" id="senha" placeholder="Digite uma senha" required>
                 </div>
                 <div class="form-group">
                   <label class="custom-label" for="confirmarsenha">Confirmar senha</label>
-                  <input type="password" class="form-control custom-input" id="confirmarsenha" placeholder="Digite novamente a senha">
+                  <input type="password" class="form-control custom-input" id="confirmarsenha" placeholder="Digite novamente a senha" required>
                 </div>
               </div><!-- FIM PRIMEIRA COLUNA -->
-              <div class="col col-form custom-row-form">
+              <div class="col-sm-12 col-md-6 col-form custom-row-form">
                 <h3 class="title-form">02. Informações Institucionais</h3>
                 <div class="form-group custom-nome-fantasia">
                   <label class="custom-label" for="nomefantasia">Nome Fantasia</label>
-                  <input type="text" class="form-control custom-input" id="nomefantasia" placeholder="Digite o nome fantasia de seu negócio">
+                  <input type="text" class="form-control custom-input" id="nomefantasia" placeholder="Digite o nome fantasia de seu negócio" required>
                 </div>
                 <div class="form-group">
                   <label class="custom-label" for="tipoplataforma">Tipo de Plataforma</label>
-                  <input type="text" class="form-control custom-input" id="tipoplataforma" placeholder="Digite o tipo de plataforma do seu negócio">
+                  <input type="text" class="form-control custom-input" id="tipoplataforma" placeholder="Digite o tipo de plataforma do seu negócio" required>
                 </div>
                 <div class="form-group">
                   <label class="custom-label" for="segmentodaempresa">Segmento da Empresa</label>
-                  <select class="form-control custom-input" id="segmentodaempresa">
+                  <select class="form-control custom-input" id="segmentodaempresa" required>
                     <option>Selecione um segmento</option>
                     <option>Tecnologia</option>
                     <option>3</option>
@@ -89,11 +97,11 @@
               </div><!-- FIM SEGUNDA COLUNA -->
             </div><!-- FIM DA PRIMEIRA LINHA -->
             <div class="row custom-info-plano">
-              <div class="col col-form">
+              <div class="col-md-6 col-form">
                 <h3 class="title-form">03. Informações do Plano</h3>
                 <div class="form-group">
                   <label class="custom-label" for="plano">Plano</label>
-                  <select class="form-control custom-input" id="plano" aria-describedby="planoAviso">
+                  <select class="form-control custom-input" id="plano" aria-describedby="planoAviso" required>
                     <option>Selecione um plano</option>
                     <option>até 100 Produtos</option>
                     <option>3</option>
@@ -106,7 +114,7 @@
               <div class="col col-form">
                 <div class="form-group">
                   <label class="custom-label" for="periodoplano">Período do Plano</label>
-                  <select class="form-control custom-input" id="periodoplano">
+                  <select class="form-control custom-input" id="periodoplano" required>
                     <option>Selecione um período</option>
                     <option>3 meses</option>
                     <option>3</option>
@@ -160,10 +168,10 @@
     </main>
       
       <footer class="footer">
-        <div class="row">
+        <div class="row custom-footer-row">
           <div class="col col-links-footer">
-            <div class="row">
-              <div class="col">
+            <div class="row row-footer">
+              <div class="col-xs-12">
                 <h5 class="title-footer">sobre nós</h5>
                 <ul class="list-link-footer">
                   <li><a class="link-footer" href="#">quem somos</a></li>
@@ -180,7 +188,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="col col-algumas-categorias">
+              <div class="col-xs-12 col-algumas-categorias">
                 <h5 class="title-footer">algumas categorias</h5>
                 <ul class="list-link-footer">
                   <li><a class="link-footer" href="#">moda e cia</a></li>
