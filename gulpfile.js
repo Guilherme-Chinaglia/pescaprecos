@@ -15,25 +15,25 @@ var imagemin = require("gulp-imagemin");
 * Realizar a limpeza nas pastas, para o recebimento das novas atualizações
 */
 
-gulp.task("cache:css", function () {
-  del("./dist/css/style.css")
-});
+// gulp.task("cache:css", function () {
+//   del("./dist/css/style.css")
+// });
 
-gulp.task("cache:js", function () {
-  del("./dist/js/app.js")
-});
+// gulp.task("cache:js", function () {
+//   del("./dist/js/app.js")
+// });
 
-gulp.task("cache:html", function () {
-  del("./dist/*.html")
-});
+// gulp.task("cache:html", function () {
+//   del("./dist/*.html")
+// });
 
-gulp.task("cache:img", function () {
-  del("./dist/img/*")
-});
+// gulp.task("cache:img", function () {
+//   del("./dist/img/*")
+// });
 /* FIM TASKS CACHED */
 
 /*Task minify PNG, JPEG, GIF and SVG images*/
-gulp.task("imagemin", ['cache:img'], function () {
+gulp.task("imagemin", function () {
   return gulp.src("src/img/**/*")
     .pipe(imagemin())
     .pipe(gulp.dest("dist/img"));
@@ -41,7 +41,7 @@ gulp.task("imagemin", ['cache:img'], function () {
 
 
 /* TASK PARA COMPILAR O scss para css */
-gulp.task("sass", ['cache:css'], function () {
+gulp.task("sass", function () {
   return gulp.src("./src/scss/style.scss")
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(gulp.dest("./dist/css"))
@@ -50,7 +50,7 @@ gulp.task("sass", ['cache:css'], function () {
 
 
 /* TASK PARA MINIFICAR O HTML */
-gulp.task("html", ['cache:html'], function () {
+gulp.task("html", function () {
   return gulp.src("./src/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("./dist"))
@@ -66,7 +66,7 @@ gulp.task("jshint", function () {
 });
 
 /* TASK PARA MINIFICAR O JAVASCRIPT */
-gulp.task("js", ['cache:js'], function () {
+gulp.task("js", function () {
   return gulp.src("./src/js/app.js")
     .pipe(uglify())
     .pipe(gulp.dest("./dist/js"))
@@ -78,7 +78,8 @@ gulp.task("concat-js", function () {
   return gulp.src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/popper.js/dist/umd/popper.js',
-    'node_modules/bootstrap/dist/js/bootstrap.js'
+    'node_modules/bootstrap/dist/js/bootstrap.js',
+    'node_modules/jquery-validation/dist/jquery.validate.min.js'
   ])
     .pipe(concat("main.js"))
     .pipe(uglify())
@@ -103,12 +104,10 @@ gulp.task("server", function () {
   });
 
   /* Watch */
-  gulp.watch("./src/scss/**/*.scss", ['sass']);
-  gulp.watch("node_modules/bootstrap/scss/**/*.scss", ['sass']);
-  gulp.watch("./src/js/**/*.js", ['js']);
-  gulp.watch("./src/*.html", ['html']);
+  gulp.watch("./src/scss/**/*.scss", gulp.parallel(['sass']));
+  gulp.watch("node_modules/bootstrap/scss/**/*.scss", gulp.parallel(['sass']));
+  gulp.watch("./src/js/**/*.js", gulp.parallel(['js']));
+  gulp.watch("./src/*.html", gulp.parallel(['html']));
 });
 
-gulp.task("default", function (cb) {
-  return runSequence(['imagemin', 'sass', 'html', 'jshint', 'js', 'concat-js', 'move-fonts', 'server'], cb)
-});
+gulp.task("default", gulp.series('imagemin', 'sass', 'html', 'jshint', 'js', 'concat-js', 'move-fonts', 'server'));

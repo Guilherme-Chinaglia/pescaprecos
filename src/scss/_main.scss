@@ -1,0 +1,333 @@
+//main
+.main{
+
+  width: 100%;
+  padding-bottom: 102px;
+  background-color: #f2f2f2;
+
+  .chamada-cadastro{
+
+    text-align: center;
+
+    color: #58595b;
+  
+    .title-chamada{
+
+      padding-top: 3rem;
+      font-size: 42px;
+      font-weight: bold;
+    }
+
+    .chamada{
+
+      @extend %reset-paragraph;
+      margin-bottom: .4rem;
+
+      color: rgba(0,0,0,0.6);
+      font-weight: 400;
+    }
+  }
+
+  .form-cadastro{
+
+    margin-top: 3.5rem;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 9.9px 0.1px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+
+    .row{
+
+      align-items: center;
+
+      &.custom-info-plano{
+
+        margin-top: 87px;
+      }
+    }
+
+    .form-cadastro-header{
+
+      padding-top: 3.5rem;
+      padding-bottom: 4.6rem;
+
+      text-align: center;  
+      
+      .list-nav-form{
+
+        @extend %reset-list;
+        display: flex;
+        justify-content: center;
+
+        .item-nav-form{
+
+          color: #b2b4b6;
+          font-weight: 600;
+          font-size: 21px;
+        }
+
+        .link-nav-form{
+
+          font-weight: 700;
+          font-size: 20px;
+          margin-right: 20px;
+
+          width: 40px;
+          height: 40px;  
+          padding: 7px 15px;
+
+          color: #fff;
+          border-radius: 50%;
+          background-color:#b1b3b6;
+        }
+        
+        .active{
+
+          color: #58595b;
+          font-weight: 600;
+
+          .link-nav-form{
+
+            background-color: #1db2f5;
+          }
+        }
+
+        .seta{
+
+          margin: 0 27px;
+        }
+      }
+    }
+
+    .title-form{
+
+      color: #1db2f5;
+      font-weight: 400;
+      font-size: 24px;
+      //padding-bottom: 44px;
+    }
+
+    .col-form{
+
+      padding-right: 77px;
+      padding-left: 70px;
+
+      .form-group{
+
+        margin-top: 44px;
+      }
+
+      &.custom-row-form{
+
+        @include media-breakpoint-down(sm) {
+
+          margin-top: 87px;
+        }
+
+        .custom-nome-fantasia{
+
+          margin-bottom: 70px;
+        }
+        
+      }
+
+      &:nth-last-child(1){
+
+        //padding-left: 0;
+
+        @include media-breakpoint-down(xs) {
+
+          padding-left: 70px;
+        }
+      }
+
+      .custom-input{
+        
+        font-size: 18px;
+        font-weight: 400;
+        border: none;
+        border-radius: 0;
+        border-bottom: 2px solid #b1b3b6;
+        padding: 0 0 12px 0;
+
+        &:focus{
+
+          box-shadow: none;
+          border-bottom: 2px solid #1db2f5;
+        }
+      }
+
+      .custom-label{
+
+        color:rgba(0,0,0,0.6);
+        font-weight: 400;
+      }
+
+      .avisos{
+
+        color: #939598;
+        font-size: 12px;
+        font-weight: 400;
+
+        .avisos-link{
+
+          color: #939598;
+          font-weight: bold; 
+        }
+      }
+    }
+
+    .custom-row-resumo{
+
+      margin-top: 46px;
+      margin-left: 0;
+      margin-right: 0;
+
+      .custom-col-resumo{
+
+        color: #fff;
+        background-color: #1db2f5;
+        
+        .title-row-resumo{
+
+          text-align: center;
+          font-size: 32px;
+          font-weight: 400;
+          padding-top: 54px;
+          padding-bottom: 39px;
+
+          color: #fff;
+        }
+
+        .resumocontratado{
+
+          margin-bottom: 29px;
+
+          .list-resumocontratado{
+
+            @extend %reset-list;
+            display: flex;
+            justify-content: center;
+                                  
+            .item-resumocontratado{
+
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+
+              margin-left: 30px;
+              width: 175px;
+              height: 210px;
+
+              @include media-breakpoint-down(xs) {
+
+                margin-left: 15px;
+              }
+
+              color: #58595b;
+              background-color: #fff;
+              border-radius: 3px;
+              box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+
+              &:first-child{
+
+                margin-left: 0;
+              }
+
+              .img-resumocontratado{
+
+                margin-bottom: 25px;
+              }
+
+              .info-resumocontratado{
+
+                margin-bottom: 0;
+                font-size: 16px;
+                font-weight: 400;
+
+                &.destaque-resumocontratado{
+
+                  font-size: 32px;
+                  font-weight: 700;
+                  color: #58595b;
+
+                  @include media-breakpoint-down(xs) {
+
+                    font-size: 26px;
+                  }
+                }
+              }
+            }
+          }  
+        }
+
+        .precototal{
+
+          width: 225px;
+          margin-top: 23px;
+          margin-bottom: 40px;
+          margin-left: auto;
+          margin-right: auto;
+          padding-top: 23px;
+          text-align: center;
+
+          border-top: 1px solid rgba(255, 255, 255, 0.35);
+
+          .img-precototal{
+
+            float: left;
+            margin-right: 20px;
+          }
+
+          .title-precototal{
+
+            margin-bottom: 0;
+            font-size: 16px;
+            font-weight: 400;
+          }
+
+          .value-precototal{
+
+            font-size: 32px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .button-action{
+
+      text-align: center;
+      height: 200px;
+
+      .custom-btn-action{
+
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 29px;
+        
+        width: 329px;
+        height: 55px;
+        border-radius: 50px;
+        border: none;
+        background-color:#1db2f5;
+      }
+
+      .text-terms-polite{
+
+        font-size: 13px;
+        font-weight: 400;
+
+        color: #6d6e71;
+
+        .link-text-terms{
+
+          color: #58595b;
+          font-weight: 600;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

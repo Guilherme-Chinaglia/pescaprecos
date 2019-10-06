@@ -1,0 +1,165 @@
+//footer
+.footer{
+
+  color: #fff;
+
+  .custom-footer-row{
+
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .col-links-footer{
+
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 2.4;
+
+    @include media-breakpoint-down(sm) {
+
+      justify-content: center;
+
+      flex-grow: 1.4;
+
+      .row-footer {
+
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    
+    padding-top: 51px;
+    padding-bottom: 75px;
+    background-color:#00a5ee;
+
+    .col-algumas-categorias{
+
+      margin-right: 140px;
+      margin-left: 40px;
+
+      @include media-breakpoint-down(lg) {
+
+        margin-right: 15px;
+        margin-left: 0;
+      }
+
+      @include media-breakpoint-down(md) {
+
+        margin-right: 0;
+      }
+    }
+
+    .midiasocial{
+
+      margin-top: 47px;
+
+      .list-midiasocial{
+
+        display: flex;
+        @extend %reset-list;
+
+        .link-midiasocial{
+        
+          color: #fff;
+        }  
+
+        .item-midiasocial{
+          
+          padding-left: 25px;
+
+          &:first-child{
+
+            padding-left: 0;
+          }
+        }  
+      }  
+    }
+  }
+
+  .title-footer{
+
+    width: 210px;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+    @include media-breakpoint-down(sm) {
+
+      margin-top: 20px;
+    }
+  }
+
+    .list-link-footer{
+
+      @extend %reset-list;
+      
+      .link-footer{
+
+        font-size: 14px;
+        font-weight: 400;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+
+  .col-links-anunciante{
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1.5;
+
+    padding-left: 50px;
+
+     @include media-breakpoint-down(lg) {
+      
+      padding-left: 30px;
+    }
+
+    @include media-breakpoint-down(sm) {
+
+      align-items: center;
+      padding-left: 0;
+    }
+   
+    padding-top: 51px;
+    
+    background-color: #1db2f5;
+
+    .list-anunciantes{
+
+      @extend %reset-list;
+
+      .item-anunciantes{
+
+        margin-bottom: 80px;
+
+        &:first-child{
+
+          margin-bottom: 25px;
+        }
+      }
+
+      .link-anunciantes{
+
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+
+        .img-anunciante{
+
+          margin-right: 15px;
+        }
+        
+      }
+    }
+  }
+
+  .logotipo{
+
+    font-size: 14px;
+
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 600;
+  }
+}

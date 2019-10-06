@@ -56,42 +56,42 @@
               </li>
             </ul>    
           </header>
-          <form action="#">
+          <form id="form" action="#">
             <div class="row">
               <div class="col-sm-12 col-md-6 col-form">
                 <h3 class="title-form">01. Informações de Acesso a Conta</h3>
                 <div class="form-group">
                   <label class="custom-label" for="email">E-mail</label>
-                  <input type="email" class="form-control custom-input" id="email" aria-describedby="emailAviso" placeholder="Digite um e-mail válido" required>
+                  <input name="email" type="email" class="form-control custom-input" id="email" aria-describedby="emailAviso" placeholder="Digite um e-mail válido" required>
                   <small id="emailAviso" class="form-text text-muted avisos">Utilize um e-mail profissional, ele não será visto pelos clientes.</small>
                 </div>
                 <div class="form-group">
                   <label class="custom-label" for="senha">Senha</label>
-                  <input type="password" class="form-control custom-input" id="senha" placeholder="Digite uma senha" required>
+                  <input name="password" type="password" class="form-control custom-input" id="senha" placeholder="Digite uma senha" required>
                 </div>
                 <div class="form-group">
                   <label class="custom-label" for="confirmarsenha">Confirmar senha</label>
-                  <input type="password" class="form-control custom-input" id="confirmarsenha" placeholder="Digite novamente a senha" required>
+                  <input name="confirmpassword" type="password" class="form-control custom-input" id="confirmarsenha" placeholder="Digite novamente a senha" required>
                 </div>
               </div><!-- FIM PRIMEIRA COLUNA -->
               <div class="col-sm-12 col-md-6 col-form custom-row-form">
                 <h3 class="title-form">02. Informações Institucionais</h3>
                 <div class="form-group custom-nome-fantasia">
                   <label class="custom-label" for="nomefantasia">Nome Fantasia</label>
-                  <input type="text" class="form-control custom-input" id="nomefantasia" placeholder="Digite o nome fantasia de seu negócio" required>
+                  <input name="nomefantasia" type="text" class="form-control custom-input" id="nomefantasia" placeholder="Digite o nome fantasia de seu negócio" required>
                 </div>
                 <div class="form-group">
                   <label class="custom-label" for="tipoplataforma">Tipo de Plataforma</label>
-                  <input type="text" class="form-control custom-input" id="tipoplataforma" placeholder="Digite o tipo de plataforma do seu negócio" required>
+                  <input name="tipoplataforma" type="text" class="form-control custom-input" id="tipoplataforma" placeholder="Digite o tipo de plataforma do seu negócio" required>
                 </div>
                 <div class="form-group">
                   <label class="custom-label" for="segmentodaempresa">Segmento da Empresa</label>
-                  <select class="form-control custom-input" id="segmentodaempresa" required>
-                    <option>Selecione um segmento</option>
-                    <option>Tecnologia</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                  <select name="segmento" class="form-control custom-input" id="segmentodaempresa" required>
+                    <option value="">Selecione um segmento</option>
+                    <option value="tecnologia">Tecnologia</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                   </select>
                 </div>
               </div><!-- FIM SEGUNDA COLUNA -->
@@ -101,12 +101,12 @@
                 <h3 class="title-form">03. Informações do Plano</h3>
                 <div class="form-group">
                   <label class="custom-label" for="plano">Plano</label>
-                  <select class="form-control custom-input" id="plano" aria-describedby="planoAviso" required>
-                    <option>Selecione um plano</option>
-                    <option>até 100 Produtos</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                  <select name="plano" class="form-control custom-input" id="plano" aria-describedby="planoAviso" required>
+                    <option value="">Selecione um plano</option>
+                    <option value="100">até 100 Produtos</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                   </select>
                   <small id="planoAviso" class="form-text text-muted avisos">Não tem o plano que você quer? <a class="avisos-link" href="#">Clique aqui</a> e fale conosco.</small>
                 </div>
@@ -114,12 +114,12 @@
               <div class="col col-form">
                 <div class="form-group">
                   <label class="custom-label" for="periodoplano">Período do Plano</label>
-                  <select class="form-control custom-input" id="periodoplano" required>
-                    <option>Selecione um período</option>
-                    <option>3 meses</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                  <select name="periodo" class="form-control custom-input" id="periodoplano" required>
+                    <option value="">Selecione um período</option>
+                    <option value="3">3 meses</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
                   </select>
                 </div>
               </div>
