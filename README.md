@@ -8,7 +8,6 @@ Layout para teste na StartUP ZERO1BIT.
 </p>
 	
 1. git clone https://github.com/Guilherme-Chinaglia/pescaprecos.git
-2. npm install gulp-cli -g (instala o gulp)
-3. npm install gulp -D (instala o gulp)
-4. npm install (instala o node_modules com os pacotes)
-5. rode o comando  gulp no seu terminal/cmd
+2. npm install --global gulp-cli
+3. npm install (instala o node_modules com os pacotes)
+4. rode o comando  gulp no seu terminal/cmd
